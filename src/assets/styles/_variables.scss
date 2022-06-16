@@ -1,0 +1,25 @@
+$breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px,
+  xl: 1440px,
+  2xl: 1680px,
+) !default;
+
+$max-width: 1600px;
+
+// 1rem = 16px
+$padding-sm: 1.5rem;
+$padding-md: 2rem;
+$padding-lg: 2.5rem;
+$padding-xl: 5rem;
+
+$padding-by-breakpoints: (
+  xs: $padding-sm,
+  sm: $padding-md,
+  md: $padding-md,
+  lg: $padding-lg,
+  xl: $padding-xl,
+  2xl: $padding-xl,
+) !default;
