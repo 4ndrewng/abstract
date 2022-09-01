@@ -10,6 +10,10 @@ html {
   font-family: "Libre Baskerville";
 }
 
+.handwriting-font {
+  font-family: "Patrick Hand", cursive;
+}
+
 .wrapper {
   @each $breakpoint, $size in $padding-by-breakpoints {
     @include media-breakpoint-up($breakpoint) {

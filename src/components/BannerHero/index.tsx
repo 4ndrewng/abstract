@@ -21,7 +21,17 @@ const BannerHero = () => {
                 <span className="libre-font">True version control</span> for
                 Sketch files
               </BannerHeroText>
-              <Button href="#" label="Start Trial" />
+              <ButtonWrapper>
+                <div>
+                  <Button href="#" label="Start Trial" />
+                </div>
+                <div>
+                  <Button href="#" label="Download" type="reverse" />
+                </div>
+              </ButtonWrapper>
+              <StyledText>
+                1 in 3 Fortune 500 companies use Sketch + Abstract
+              </StyledText>
             </div>
           </div>
         </Container>
@@ -55,10 +65,27 @@ const BannerRadius = styled.div`
 `;
 
 const BannerHeroText = styled.h1`
+  position: relative;
   font-size: 7.5rem;
   line-height: 0.94;
   font-weight: 400;
   letter-spacing: -0.05em;
   margin-top: 0;
   margin-bottom: 2.5rem;
+`;
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  margin: 0 -8px;
+  padding-bottom: 120px;
+
+  div {
+    padding: 0 8px;
+  }
+`;
+
+const StyledText = styled.div`
+  font-size: 1.25rem;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
 `;
