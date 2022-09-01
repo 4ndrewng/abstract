@@ -1,11 +1,16 @@
 import React from "react";
 
-import Container from "./components/Container";
 import "./assets/styles/all.scss";
 import Header from "./components/Header";
+import BannerHero from "./components/BannerHero";
 
 function App() {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <BannerHero />
+    </>
+  );
 }
 
 export default App;

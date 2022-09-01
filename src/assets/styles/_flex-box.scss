@@ -1,0 +1,26 @@
+.col {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -$gutter;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    padding: 0 $gutter;
+    flex: 0 0 calc($i * 100% / 12);
+  }
+
+  @include media-breakpoint-down(md) {
+    .col-#{$i}-md {
+      padding: 0 $gutter;
+      flex: 0 0 calc($i * 100% / 12);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .col-#{$i}-sm {
+      padding: 0 $gutter;
+      flex: 0 0 calc($i * 100% / 12);
+    }
+  }
+}

@@ -6,3 +6,8 @@ export const BREAKPOINTS = {
   xl: "1440px",
   "2xl": "1680px",
 };
+
+export const themeColor = {
+  black: "#000",
+  white: "#fff",
+};

@@ -1,4 +1,3 @@
-import { CSSProperties } from "react";
 import { BREAKPOINTS } from "./constants";
 
 export const mediaUp = (range: string) => {

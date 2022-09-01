@@ -3,11 +3,11 @@
 }
 
 html {
-  font-family: "Libre Baskerville";
+  font-family: "Maven Pro";
 }
 
-.maven {
-  font-family: "Maven Pro";
+.libre-font {
+  font-family: "Libre Baskerville";
 }
 
 .wrapper {
@@ -16,9 +16,7 @@ html {
       padding: 0 $size;
     }
   }
-}
-
-.container {
+  box-sizing: content-box;
   max-width: 1600px;
   margin: 0 auto;
 }
