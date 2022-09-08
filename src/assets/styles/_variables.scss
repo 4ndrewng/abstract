@@ -16,9 +16,9 @@ $padding-lg: 2.5rem;
 $padding-xl: 5rem;
 
 $padding-by-breakpoints: (
-  xs: $padding-sm,
-  sm: $padding-md,
-  md: $padding-md,
+  xs: $padding-md,
+  sm: $padding-lg,
+  md: $padding-lg,
   lg: $padding-lg,
   xl: $padding-xl,
   2xl: $padding-xl,

@@ -15,12 +15,18 @@ html {
 }
 
 .wrapper {
+  box-sizing: content-box;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
   @each $breakpoint, $size in $padding-by-breakpoints {
     @include media-breakpoint-up($breakpoint) {
       padding: 0 $size;
     }
   }
-  box-sizing: content-box;
-  max-width: 1600px;
-  margin: 0 auto;
+}
+
+.container {
+  position: relative;
 }
