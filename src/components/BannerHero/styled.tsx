@@ -31,7 +31,7 @@ export const BannerRadius = styled.div`
   left: 0%;
   right: 0%;
   height: 5rem;
-  z-index: -1;
+  z-index: 10;
   margin-top: -1px;
   border-bottom-left-radius: 5rem;
   border-bottom-right-radius: 5rem;
@@ -118,7 +118,7 @@ export const HeroImage = styled.div`
   top: 0%;
   right: 0%;
   bottom: -5rem;
-  z-index: 1;
+  z-index: 100;
   overflow: hidden;
   border-bottom-right-radius: 5rem;
 
