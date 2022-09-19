@@ -12,7 +12,7 @@ const StickyHeading = () => {
           <Styled.HeadingLine />
         </Styled.HeadingLineWrapper>
         <div className="col">
-          <Styled.DesignHeading className="libre-font col-8">
+          <Styled.DesignHeading className="libre-font col-8 col-9-md">
             Design collaboration shouldn’t be extra work
           </Styled.DesignHeading>
         </div>

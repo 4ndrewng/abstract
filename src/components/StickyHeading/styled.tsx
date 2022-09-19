@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { mediaDown } from "../../utils/mixins";
+
 type StickyDivProps = {
   paddingSm: boolean;
   bgColor: string;
@@ -13,6 +15,10 @@ export const StickyDiv = styled.div`
   padding-top: ${(props: StickyDivProps) =>
     props.paddingSm ? "22.5ren" : "27rem"};
   background-color: ${(props: StickyDivProps) => props.bgColor};
+
+  @media ${mediaDown("sm")} {
+    padding-top: 15vh;
+  }
 `;
 
 export const DesignHeading = styled.h3`
@@ -23,6 +29,17 @@ export const DesignHeading = styled.h3`
   letter-spacing: -0.05em;
   z-index: 2;
   padding-bottom: 2rem;
+
+  @media ${mediaDown("md")} {
+    font-size: 4rem;
+    line-height: 1.1;
+  }
+
+  @media ${mediaDown("sm")} {
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 500;
+  }
 `;
 
 export const HeadingLineWrapper = styled.div`
@@ -30,6 +47,10 @@ export const HeadingLineWrapper = styled.div`
   top: 0;
   width: 100%;
   z-index: 1;
+
+  @media ${mediaDown("sm")} {
+    display: none;
+  }
 `;
 
 export const HeadingLine = styled.div`

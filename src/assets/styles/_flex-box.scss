@@ -1,7 +1,8 @@
 .col {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -$gutter;
+  margin-left: -$gutter;
+  margin-right: -$gutter;
 }
 
 @for $i from 1 through 12 {

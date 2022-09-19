@@ -15,8 +15,7 @@ html {
 }
 
 .wrapper {
-  box-sizing: content-box;
-  max-width: 1600px;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 0 2rem;
 
@@ -29,4 +28,5 @@ html {
 
 .container {
   position: relative;
+  max-width: 1600px;
 }
