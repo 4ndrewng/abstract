@@ -14,6 +14,10 @@ export const ColabAdvances = styled.div`
   background-color: #dadbf1;
   border-bottom-left-radius: 5rem;
   border-bottom-right-radius: 5rem;
+
+  @media ${mediaDown("sm")} {
+    padding-bottom: 7.5rem;
+  }
 `;
 
 export const AdvanceIcon = styled.div`
