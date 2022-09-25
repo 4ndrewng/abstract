@@ -16,6 +16,7 @@ export const BannerWrapper = styled.div`
   @media ${mediaDown("sm")} {
     padding-bottom: 0;
   }
+  z-index: 10;
 `;
 
 export const BannerTextWrapper = styled.div`

@@ -18,6 +18,8 @@ export const ColabAdvances = styled.div`
   @media ${mediaDown("sm")} {
     padding-bottom: 7.5rem;
   }
+  z-index: 8;
+  position: relative;
 `;
 
 export const AdvanceIcon = styled.div`

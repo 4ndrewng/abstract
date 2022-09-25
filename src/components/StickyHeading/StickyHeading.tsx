@@ -1,22 +1,22 @@
-import React from "react";
+import { ReactNode } from "react";
 
+import { StickyDivProps } from "./styled";
 import * as Styled from "./styled";
 import Container from "../Container";
 
-const StickyHeading = () => {
+interface StickyHeading extends StickyDivProps {
+  children: ReactNode;
+}
+
+const StickyHeading = ({
+  paddingSm,
+  bgColor,
+  zIndex,
+  children,
+}: StickyHeading) => {
   return (
-    <Styled.StickyDiv bgColor={"#dadbf1"}>
-      <Container>
-        <Styled.HeadingLineWrapper>
-          <Styled.HeadingLine />
-          <Styled.HeadingLine />
-        </Styled.HeadingLineWrapper>
-        <div className="col">
-          <Styled.DesignHeading className="libre-font col-8 col-9-md">
-            Design collaboration shouldn’t be extra work
-          </Styled.DesignHeading>
-        </div>
-      </Container>
+    <Styled.StickyDiv bgColor={bgColor} paddingSm={paddingSm} zIndex={zIndex}>
+      <Container>{children}</Container>
     </Styled.StickyDiv>
   );
 };
