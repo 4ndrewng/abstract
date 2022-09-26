@@ -11,6 +11,13 @@
     flex: 0 0 calc($i * 100% / 12);
   }
 
+  @include media-breakpoint-down(lg) {
+    .col-#{$i}-lg {
+      padding: 0 $gutter;
+      flex: 0 0 calc($i * 100% / 12);
+    }
+  }
+
   @include media-breakpoint-down(md) {
     .col-#{$i}-md {
       padding: 0 $gutter;
@@ -24,4 +31,8 @@
       flex: 0 0 calc($i * 100% / 12);
     }
   }
+}
+
+.col .pb-32 {
+  padding-bottom: 32px;
 }

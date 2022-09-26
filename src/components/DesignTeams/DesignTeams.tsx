@@ -7,7 +7,7 @@ const DesignTeams = () => {
     <Styled.DesignTeamsWrapper>
       <Container>
         <div className="col">
-          <div className="col-4">
+          <div className="col-4 col-12-lg pb-32">
             <TeamStory
               iconBg="#e3dbd5"
               img="/images/brands/cisco_black.svg"
@@ -16,7 +16,7 @@ const DesignTeams = () => {
               desc="How Cisco built an enterprise global design system"
             />
           </div>
-          <div className="col-4">
+          <div className="col-4 col-12-lg pb-32">
             <TeamStory
               iconBg="#c9d5d3"
               img="/images/brands/sale_force.svg"
@@ -25,7 +25,7 @@ const DesignTeams = () => {
               desc="How designers at Salesforce fostered trust and teamwork"
             />
           </div>
-          <div className="col-4">
+          <div className="col-4 col-12-lg pb-32">
             <TeamStory
               iconBg="#dadbf1"
               img="/images/brands/banner_health.svg"
