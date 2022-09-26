@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import BannerHero from "./components/BannerHero";
 import DesignColab from "./components/DesginColab";
 import DesignLove from "./components/DesignLove";
+import Dedicated from "./components/Dedicated";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <BannerHero />
       <DesignColab />
       <DesignLove />
+      <Dedicated />
     </>
   );
 }

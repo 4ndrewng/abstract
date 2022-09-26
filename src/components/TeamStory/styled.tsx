@@ -7,10 +7,14 @@ export const Wrapper = styled.a`
   cursor: pointer;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: ${(props: any) => (props.isCard ? "column" : "row")};
   box-shadow: 0 0 0 0 #000, 0 0 0 1px #000;
   transform: translate(0px, 0px);
-  transition: transform 100ms ease, box-shadow 100ms ease,
-    -webkit-transform 100ms ease;
+  transition: ${(props: any) =>
+    props.isCard
+      ? "all 400ms cubic-bezier(.645, .045, .355, 1)"
+      : "transform 100ms ease, box-shadow 100ms ease,-webkit-transform 100ms ease"};
+  height: ${(props: any) => (props.isCard ? "100%" : "auto")};
 
   &:hover {
     transform: translate(-6px, -6px);
@@ -20,21 +24,33 @@ export const Wrapper = styled.a`
 
 export const IconWrapper = styled.div`
   width: 100%;
-  padding: 60px;
-  height: 12rem;
-  background-color: ${({ iconBg }: TeamStoryPropsType) => iconBg};
+  padding: ${(props: any) => (props.isCard ? "0" : "60px")};
+  height: ${(props: any) => (props.isCard ? "auto" : "12rem")};
+  background-color: ${({ iconBg }: TeamStoryPropsType) =>
+    iconBg ? iconBg : "#fff"};
   box-shadow: inset 0 0 0 1px #000;
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: ${(props: any) => (props.isCard ? "cover" : "contain")};
   }
 
   @media ${mediaBetween("sm", "lg")} {
-    height: 8.5rem;
-    padding: 2.5rem 1rem;
-    width: calc((2 * 100%) / 12);
+    height: ${(props: any) => (props.isCard ? "auto" : "8.5rem")};
+    padding: ${(props: any) => (props.isCard ? "0" : "2.5rem 1rem")};
+    width: ${(props: any) =>
+      props.isCard ? "100%" : " calc((2 * 100%) / 12)"};
+  }
+`;
+
+export const InfoWrapper = styled.div`
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media ${mediaDown("lg")} {
+    flex: auto;
   }
 `;
 
@@ -54,7 +70,8 @@ export const InfoItem = styled.div`
     }
 
     @media ${mediaBetween("sm", "lg")} {
-      width: calc((3 * 100%) / 12);
+      width: ${(props: any) =>
+        props.isCard ? "100%" : "calc((3 * 100%) / 12)"};
     }
   }
 
@@ -69,7 +86,8 @@ export const InfoItem = styled.div`
     }
 
     @media ${mediaBetween("sm", "lg")} {
-      width: calc((5 * 100%) / 12);
+      width: ${(props: any) =>
+        props.isCard ? "100%" : "calc((5 * 100%) / 12)"};
       display: flex;
       align-items: center;
     }
@@ -77,11 +95,17 @@ export const InfoItem = styled.div`
 
   h3 {
     margin: 0;
-    margin-top: 0.5rem;
-    font-size: 1.5rem;
+    margin-top: ${(props: any) => (props.isCard ? "0" : "0.5rem")};
+    font-size: ${(props: any) => (props.isCard ? "1.6vw" : "1.5rem")};
     line-height: 1.17;
     font-weight: 500;
     letter-spacing: -0.03em;
+  }
+
+  p {
+    margin-top: ${(props: any) => (props.isCard ? "0" : "1rem")};
+    margin-bottom: ${(props: any) => (props.isCard ? "0" : "1rem")};
+    font-size: ${(props: any) => (props.isCard ? "1.125vw" : "1rem")};
   }
 `;
 
@@ -96,13 +120,15 @@ export const ReadStory = styled.div`
   }
 
   @media ${mediaBetween("sm", "lg")} {
-    width: calc((2 * 100%) / 12);
+    width: ${(props: any) => (props.isCard ? "100%" : "calc((2 * 100%) / 12)")};
   }
 
   div {
     display: inline-block;
     color: #4c5fd5;
-    text-decoration: underline;
+    text-decoration: ${(props: any) => (props.isCard ? "none" : "underline")};
+    font-size: ${(props: any) => (props.isCard ? "1.125vw" : "1rem")};
+    font-weight: ${(props: any) => (props.isCard ? "500" : "400")};
   }
 
   div:hover {
