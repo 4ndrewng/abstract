@@ -19,6 +19,8 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.div`
+  position: relative;
+  z-index: 10;
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   grid-column-gap: 1rem;
