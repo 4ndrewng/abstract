@@ -26,6 +26,10 @@ export const Heading = styled.h1`
   line-height: 1;
   font-weight: 400;
   letter-spacing: -0.04em;
+
+  @media ${mediaDown("sm")} {
+    font-size: 11vw;
+  }
 `;
 
 export const Desc = styled.p`
@@ -33,6 +37,11 @@ export const Desc = styled.p`
   grid-column-end: 11;
   margin: 2rem 0 4rem;
   font-size: 2vw;
+  text-align: center;
+
+  @media ${mediaDown("sm")} {
+    font-size: 4vw;
+  }
 `;
 
 export const Card = styled.div`
