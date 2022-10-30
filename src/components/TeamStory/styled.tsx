@@ -100,12 +100,20 @@ export const InfoItem = styled.div`
     line-height: 1.17;
     font-weight: 500;
     letter-spacing: -0.03em;
+
+    @media ${mediaDown("sm")} {
+      font-size: ${(props: any) => (props.isCard ? "3vw" : "1rem")};
+    }
   }
 
   p {
     margin-top: ${(props: any) => (props.isCard ? "0" : "1rem")};
     margin-bottom: ${(props: any) => (props.isCard ? "0" : "1rem")};
     font-size: ${(props: any) => (props.isCard ? "1.125vw" : "1rem")};
+
+    @media ${mediaDown("sm")} {
+      font-size: ${(props: any) => (props.isCard ? "3vw" : "1rem")};
+    }
   }
 `;
 
@@ -129,6 +137,10 @@ export const ReadStory = styled.div`
     text-decoration: ${(props: any) => (props.isCard ? "none" : "underline")};
     font-size: ${(props: any) => (props.isCard ? "1.125vw" : "1rem")};
     font-weight: ${(props: any) => (props.isCard ? "500" : "400")};
+
+    @media ${mediaDown("sm")} {
+      font-size: ${(props: any) => (props.isCard ? "3vw" : "1rem")};
+    }
   }
 
   div:hover {
