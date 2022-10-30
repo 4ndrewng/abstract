@@ -58,10 +58,10 @@ export const Card = styled.div`
     grid-auto-rows: 1fr;
   }
 
-  & + & {
-    padding-top: 2rem;
-  }
   @media ${mediaDown("md")} {
+    & + & {
+      padding-top: 2rem;
+    }
   }
 `;
 
